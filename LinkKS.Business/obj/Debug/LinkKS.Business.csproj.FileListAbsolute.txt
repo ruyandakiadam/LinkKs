@@ -1,0 +1,6 @@
+C:\Users\ht\Desktop\Proje\LinkKS\LinkKS.Business\bin\Debug\LinkKS.Business.dll.config
+C:\Users\ht\Desktop\Proje\LinkKS\LinkKS.Business\bin\Debug\LinkKS.Business.dll
+C:\Users\ht\Desktop\Proje\LinkKS\LinkKS.Business\bin\Debug\LinkKS.Business.pdb
+C:\Users\ht\Desktop\Proje\LinkKS\LinkKS.Business\obj\Debug\LinkKS.Business.csprojResolveAssemblyReference.cache
+C:\Users\ht\Desktop\Proje\LinkKS\LinkKS.Business\obj\Debug\LinkKS.Business.dll
+C:\Users\ht\Desktop\Proje\LinkKS\LinkKS.Business\obj\Debug\LinkKS.Business.pdb

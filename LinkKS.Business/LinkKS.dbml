@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LINK" Class="LinkKSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=HT\SQLEXPRESS;Initial Catalog=LINK;Integrated Security=True" SettingsObjectName="LinkKS.Business.Properties.Settings" SettingsPropertyName="LINKConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.LINK_LOG" Member="LINK_LOGs">
+    <Type Name="LINK_LOG">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LinkId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Referer" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Agent" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Association Name="LINK_LINK_LOG" Member="LINK" ThisKey="LinkId" OtherKey="Id" Type="LINK" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[USER]" Member="USERs">
+    <Type Name="USER">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EMail" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Association Name="USER_LINK" Member="LINKs" ThisKey="Id" OtherKey="UserId" Type="LINK" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LINK" Member="LINKs">
+    <Type Name="LINK">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ShortLink" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="LongLink" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Notification" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ExpireDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="OneShot" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="LINK_LINK_LOG" Member="LINK_LOGs" ThisKey="Id" OtherKey="LinkId" Type="LINK_LOG" />
+      <Association Name="USER_LINK" Member="USER" ThisKey="UserId" OtherKey="Id" Type="USER" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

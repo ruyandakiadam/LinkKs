@@ -1,0 +1,7 @@
+C:\Users\ht\Desktop\Proje\LinkKS\LinkKS.Test\bin\Debug\LinkKS.Test.exe
+C:\Users\ht\Desktop\Proje\LinkKS\LinkKS.Test\bin\Debug\LinkKS.Test.pdb
+C:\Users\ht\Desktop\Proje\LinkKS\LinkKS.Test\bin\Debug\LinkKS.Business.dll
+C:\Users\ht\Desktop\Proje\LinkKS\LinkKS.Test\bin\Debug\LinkKS.Business.pdb
+C:\Users\ht\Desktop\Proje\LinkKS\LinkKS.Test\obj\Debug\LinkKS.Test.csprojResolveAssemblyReference.cache
+C:\Users\ht\Desktop\Proje\LinkKS\LinkKS.Test\obj\Debug\LinkKS.Test.exe
+C:\Users\ht\Desktop\Proje\LinkKS\LinkKS.Test\obj\Debug\LinkKS.Test.pdb
